@@ -1,0 +1,20 @@
+/* Include.gradle configuration: http://docs.nativescript.org/plugins/plugins#includegradle-specification */
+
+android {
+	productFlavors {
+		"nativescript-aliyun-oss" {
+			dimension "nativescript-aliyun-oss"
+		}
+	}
+}
+
+dependencies {
+    // Describe plugin native Android dependencies like
+	// compile "groupName:pluginName:ver" 
+    // EXAMPLE: compile "com.facebook.fresco:fresco:0.9.0+"
+	compile fileTree(dir: 'libs', include: ['*.jar'])
+    // testCompile 'junit:junit:4.12'
+    // compile 'com.android.support:appcompat-v7:23.1.1'
+    // compile 'com.android.support:design:23.1.1'
+    compile group: 'org.apache.httpcomponents' , name: 'httpclient-android' , version: '4.3.5.1'
+}
